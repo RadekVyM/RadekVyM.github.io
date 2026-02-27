@@ -1,0 +1,20 @@
+.link-chip {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    gap: 0.35rem;
+    background: var(--background);
+    border: 1px var(--outline) solid;
+    border-radius: 100vh;
+    padding: 0.4rem 0.7rem 0.4rem 0.6rem;
+    transition: ease-in-out 0.15s opacity;
+
+    svg {
+        font-size: 20px;
+    }
+
+    &:hover {
+        opacity: 0.65;
+    }
+}

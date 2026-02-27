@@ -1,0 +1,8 @@
+.media-dialog {
+    width: fit-content;
+
+    .image-preview {
+        max-width: 100%;
+        max-height: 100%;
+    }
+}

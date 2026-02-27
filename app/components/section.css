@@ -1,0 +1,129 @@
+.section {
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    border-bottom: 1px var(--outline) solid;
+}
+
+.section__content {
+    --margin: 1rem;
+    --horizontal-padding: 1rem;
+    --vertical-padding: 4rem;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    width: min(calc(960px + 2 * var(--horizontal-padding)), calc(100vw - 2 * var(--margin)));
+    padding: var(--vertical-padding) var(--horizontal-padding);
+    border-inline: 1px var(--outline) solid;
+}
+
+@media (min-width: 600px) {
+    .section__content {
+        --margin: 2rem;
+        --horizontal-padding: 2rem;
+    }
+}
+
+@media (min-width: 1000px) {
+    .section__content {
+        --margin: 3rem;
+        --horizontal-padding: 3rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .section__content {
+        --margin: 3rem;
+        --horizontal-padding: 4rem;
+    }
+}
+
+.section-images {
+    isolation: isolate;
+    position: relative;
+    display: grid;
+    text-align: center;
+    max-width: 100%;
+    margin-bottom: 2rem;
+
+    transition: transform ease-in-out 0.2s;
+
+    &:has(button:hover) {
+        transform: scale(101%);
+    }
+}
+
+.section-images > * {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.section-video,
+.section-image {
+    position: relative;
+    max-width: 100%;
+
+    transition: transform ease-in-out 0.2s;
+}
+
+button.section-image {
+    cursor: pointer;
+}
+
+.section-image:not(:has(.section-image__content)),
+.section-image__content,
+.section-video {
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.08);
+}
+
+.section-video {
+    border-radius: 1rem;
+}
+
+.section-image {
+    height: fit-content;
+    background-color: transparent;
+    border: none;
+}
+
+.section-image__content {
+    max-width: 100%;
+}
+
+.section-title {
+    font-weight: 800;
+    font-size: max(min(36px, 4vw), 25px);
+    margin-bottom: 1.5rem;
+}
+
+.section p {
+    line-height: 180%;
+    margin-bottom: 1rem;
+}
+
+.section p a {
+    text-decoration: underline;
+}
+
+.section-links {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.section-technologies {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 0.6rem;
+    row-gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.section-technologies__item {
+    border-radius: 100vh;
+    background: var(--foreground);
+    color: var(--background);
+    font-size: 13px;
+    font-weight: 600;
+    padding: 0.25rem 0.6rem;
+}
