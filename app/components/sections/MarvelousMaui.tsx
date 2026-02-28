@@ -35,7 +35,7 @@ export default function MarvelousMaui() {
             </p>
 
             <p>
-                This project has been well received by the .NET MAUI community and earned <strong>500+ stars</strong> on <a href="https://github.com/RadekVyM/SimpleToolkit">GitHub</a> since
+                This project has been well received by the .NET MAUI community and earned <strong>500+ stars</strong> on <a href="https://github.com/RadekVyM/MarvelousMAUI">GitHub</a> since
                 its release.
             </p>
 
