@@ -1,0 +1,25 @@
+.maui-challenges {
+    .gadgets-store-app {
+        z-index: 10;
+    }
+    .callingapp {
+        --rotation: 5deg;
+        z-index: 6;
+        transform: scale(90%) translateX(min(98%, 30vw)) rotateZ(var(--rotation));
+    }
+    .navbaranimation1 {
+        --rotation: -5deg;
+        z-index: 8;
+        transform: scale(90%) translateX(max(-98%, -30vw)) rotateZ(var(--rotation));
+    }
+
+    button.gadgets-store-app:hover {
+        transform: scale(102%);
+    }
+    button.callingapp:hover {
+        --rotation: 6deg;
+    }
+    button.navbaranimation1:hover {
+        --rotation: -6deg;
+    }
+}

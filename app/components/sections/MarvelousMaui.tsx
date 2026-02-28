@@ -1,15 +1,27 @@
-import { Section, SectionTitle, SectionLinks, SectionTechnologies, SectionImages, SectionVideo } from "./section";
-import LinkChip from "./LinkChip";
+"use client";
+
+import { Section, SectionTitle, SectionLinks, SectionTechnologies, SectionImages, SectionVideo } from "../section";
+import LinkChip from "../LinkChip";
 import { TbBrandGithub } from "react-icons/tb";
+import { createVideoItem } from "@/app/types/MediaItem";
+import useMediaDialog from "@/app/hooks/useMediaDialog";
+import MediaDialog from "../MediaDialog";
+
+const VIDEO = createVideoItem("marvelous-video", "/images/marvelous-maui/Marvelous .NET MAUI.mp4");
+const VIDEOS = [VIDEO];
 
 export default function MarvelousMaui() {
+    const dialogState = useMediaDialog(VIDEOS);
+
     return (
         <Section className="marvelous-maui">
             <SectionImages>
                 <SectionVideo
-                    controls
-                    loop
-                    source="/images/marvelous-maui/Marvelous .NET MAUI.mp4" />
+                    source={VIDEO.source}
+                    onClick={async () => {
+                        dialogState.setCurrentItem(VIDEO.className);
+                        await dialogState.show();
+                    }} />
             </SectionImages>
 
             <SectionTitle>
@@ -37,6 +49,9 @@ export default function MarvelousMaui() {
 
             <SectionTechnologies
                 items={["C#", ".NET MAUI", "SimpleToolkit"]} />
+
+            <MediaDialog
+                state={dialogState} />
         </Section>
     );
 }

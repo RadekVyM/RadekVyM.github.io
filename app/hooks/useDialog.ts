@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import type { DialogState } from "../types/DialogState";
 
-const ANIMATION_LENGTH = 150;
+const ANIMATION_LENGTH = 200;
 
 export default function useDialog(
     openAnimation?: string,
@@ -29,6 +29,7 @@ export default function useDialog(
             const timeout = setTimeout(() => {
                 clearTimeout(timeout);
                 resolve(undefined);
+                setAnimationClass("");
             }, ANIMATION_LENGTH);
         });
     }, []);
@@ -40,6 +41,7 @@ export default function useDialog(
                 setIsOpen(false);
                 clearTimeout(timeout);
                 resolve(undefined);
+                setAnimationClass("");
             }, ANIMATION_LENGTH);
         });
     }, []);

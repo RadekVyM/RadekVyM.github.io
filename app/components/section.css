@@ -9,7 +9,7 @@
 .section__content {
     --margin: 1rem;
     --horizontal-padding: 1rem;
-    --vertical-padding: 4rem;
+    --vertical-padding: 4.5rem;
     grid-column-start: 2;
     grid-column-end: 3;
     width: min(calc(960px + 2 * var(--horizontal-padding)), calc(100vw - 2 * var(--margin)));
@@ -66,27 +66,48 @@
     transition: transform ease-in-out 0.2s;
 }
 
+button.section-video,
 button.section-image {
+    width: fit-content;
+    margin: 0 auto;
     cursor: pointer;
 }
 
 .section-image:not(:has(.section-image__content)),
+.section-video:not(:has(.section-video__content)),
 .section-image__content,
-.section-video {
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.08);
+.section-video__content {
+    filter: drop-shadow(0 0 1rem rgba(0, 0, 0, 0.08));
+    object-fit: contain;
 }
 
+.section-video__content,
 .section-video {
     border-radius: 1rem;
 }
 
-.section-image {
+.section-video__play {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    color: var(--foreground);
+    background: var(--background);
+    border-radius: 100vh;
+    padding: 0.6rem;
+    filter: drop-shadow(0 0 1rem rgba(0, 0, 0, 0.08));
+}
+
+.section-image,
+.section-video {
     height: fit-content;
     background-color: transparent;
     border: none;
 }
 
-.section-image__content {
+.section-image__content,
+.section-video__content {
     max-width: 100%;
 }
 
@@ -103,6 +124,13 @@ button.section-image {
 
 .section p a {
     text-decoration: underline;
+}
+
+.section p dfn {
+    text-decoration: none;
+    border-bottom: 2px dotted var(--foreground);
+    font-style: normal;
+    cursor: help;
 }
 
 .section-links {

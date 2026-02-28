@@ -1,5 +1,5 @@
-import { Section, SectionTitle, SectionLinks, SectionTechnologies } from "./section";
-import LinkChip from "./LinkChip";
+import { Section, SectionTitle, SectionLinks, SectionTechnologies } from "../section";
+import LinkChip from "../LinkChip";
 import "./ItNetwork.css";
 
 export default function ItNetwork() {

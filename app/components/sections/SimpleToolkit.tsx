@@ -1,5 +1,5 @@
-import { Section, SectionTitle, SectionLinks, SectionTechnologies } from "./section";
-import LinkChip from "./LinkChip";
+import { Section, SectionTitle, SectionLinks, SectionTechnologies } from "../section";
+import LinkChip from "../LinkChip";
 import { TbBrandGithub, TbPackage } from "react-icons/tb";
 
 export default function SimpleToolkit() {

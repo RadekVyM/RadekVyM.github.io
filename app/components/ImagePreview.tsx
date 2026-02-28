@@ -3,6 +3,7 @@ export default function ImagePreview(props: {
     darkSource?: string,
     alt?: string,
     className?: string,
+    height?: number,
 }) {
     return (
         <picture>
@@ -13,7 +14,8 @@ export default function ImagePreview(props: {
             <img
                 src={props.source}
                 alt={props.alt}
-                className={props.className} />
+                className={props.className}
+                height={props.height} />
         </picture>
     );
 }

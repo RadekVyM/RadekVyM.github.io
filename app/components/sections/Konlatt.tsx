@@ -1,12 +1,12 @@
 "use client";
 
-import { SectionImages, Section, SectionImage, SectionTitle, SectionLinks, SectionTechnologies } from "./section";
+import { SectionImages, Section, SectionImage, SectionTitle, SectionLinks, SectionTechnologies } from "../section";
 import "./Konlatt.css";
-import LinkChip from "./LinkChip";
+import LinkChip from "../LinkChip";
 import { TbBrandGithub, TbWorld } from "react-icons/tb";
-import { createImageItem, MediaItem } from "../types/MediaItem";
-import useMediaDialogState from "../hooks/useMediaDialogState";
-import MediaDialog from "./MediaDialog";
+import { createImageItem, MediaItem } from "../../types/MediaItem";
+import useMediaDialog from "../../hooks/useMediaDialog";
+import MediaDialog from "../MediaDialog";
 
 const IMAGES: Array<MediaItem> = [
     createImageItem("diagram-image", "/images/konlatt/diagram_light.png", "/images/konlatt/diagram_dark.png"),
@@ -16,7 +16,7 @@ const IMAGES: Array<MediaItem> = [
 ];
 
 export default function Konlatt() {
-    const dialogState = useMediaDialogState(IMAGES);
+    const dialogState = useMediaDialog(IMAGES);
 
     return (
         <Section className="konlatt">
@@ -45,12 +45,12 @@ export default function Konlatt() {
 
             <SectionLinks>
                 <LinkChip
-                    href="https://radekvym.github.io/konlatt" >
+                    href="https://radekvym.github.io/konlatt">
                     <TbWorld />
                     <span>App</span>
                 </LinkChip>
                 <LinkChip
-                    href="https://github.com/RadekVyM/konlatt" >
+                    href="https://github.com/RadekVyM/konlatt">
                     <TbBrandGithub />
                     <span>GitHub</span>
                 </LinkChip>

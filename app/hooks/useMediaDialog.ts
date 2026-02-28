@@ -3,9 +3,9 @@
 import { useState } from "react";
 import { MediaDialogState } from "../types/MediaDialogState";
 import { MediaItem } from "../types/MediaItem";
-import useDialog from "./useDialogState";
+import useDialog from "./useDialog";
 
-export default function useMediaDialogState(items: ReadonlyArray<MediaItem>): MediaDialogState {
+export default function useMediaDialog(items: ReadonlyArray<MediaItem>): MediaDialogState {
     const dialogState = useDialog();
     const [currentItem, setCurrentItem] = useState<MediaItem>(items[0]);
 

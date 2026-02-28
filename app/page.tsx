@@ -1,10 +1,13 @@
 import "./page.css";
-import Konlatt from "./components/Konlatt";
+import Konlatt from "./components/sections/Konlatt";
 import Header from "./components/Header";
-import SimpleToolkit from "./components/SimpleToolkit";
-import DblpAnalysisTool from "./components/DblpAnalysisTool";
-import MarvelousMaui from "./components/MarvelousMaui";
-import ItNetwork from "./components/ItNetwork";
+import SimpleToolkit from "./components/sections/SimpleToolkit";
+import DblpAnalysisTool from "./components/sections/DblpAnalysisTool";
+import MarvelousMaui from "./components/sections/MarvelousMaui";
+import ItNetwork from "./components/sections/ItNetwork";
+import Footer from "./components/Footer";
+import MauiChallenges from "./components/sections/MauiChallenges";
+import AndMore from "./components/sections/AndMore";
 
 export default function Home() {
     return (
@@ -21,6 +24,12 @@ export default function Home() {
             <SimpleToolkit />
 
             <MarvelousMaui />
+
+            <MauiChallenges />
+
+            <AndMore />
+
+            <Footer />
         </main>
     );
 }

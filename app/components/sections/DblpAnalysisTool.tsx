@@ -1,13 +1,13 @@
 "use client";
 
-import { Section, SectionTitle, SectionLinks, SectionTechnologies, SectionImages, SectionImage } from "./section";
+import { Section, SectionTitle, SectionLinks, SectionTechnologies, SectionImages, SectionImage } from "../section";
 import "./Konlatt.css";
-import LinkChip from "./LinkChip";
+import LinkChip from "../LinkChip";
 import { TbBrandGithub, TbFileText } from "react-icons/tb";
 import "./DblpAnalysisTool.css";
-import { createImageItem, MediaItem } from "../types/MediaItem";
-import useMediaDialogState from "../hooks/useMediaDialogState";
-import MediaDialog from "./MediaDialog";
+import { createImageItem, MediaItem } from "../../types/MediaItem";
+import useMediaDialog from "../../hooks/useMediaDialog";
+import MediaDialog from "../MediaDialog";
 
 const IMAGES: Array<MediaItem> = [
     createImageItem("landing-page-image", "/images/dblp-analysis-tool/landing_page.png"),
@@ -17,7 +17,7 @@ const IMAGES: Array<MediaItem> = [
 ];
 
 export default function DblpAnalysisTool() {
-    const dialogState = useMediaDialogState(IMAGES);
+    const dialogState = useMediaDialog(IMAGES);
 
     return (
         <Section className="dblp-analysis-tool">
@@ -54,7 +54,7 @@ export default function DblpAnalysisTool() {
                 <LinkChip
                     href="https://github.com/RadekVyM/dblp-analysis-tool/blob/main/text/BP_Vym%C4%9Btal%C3%ADk.pdf" >
                     <TbFileText />
-                    <span>Text</span>
+                    <span>Thesis</span>
                 </LinkChip>
             </SectionLinks>
 

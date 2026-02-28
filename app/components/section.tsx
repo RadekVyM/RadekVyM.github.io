@@ -1,3 +1,4 @@
+import { TbPlayerPlayFilled } from "react-icons/tb";
 import ImagePreview from "./ImagePreview";
 import "./section.css";
 
@@ -43,6 +44,7 @@ export function SectionImage(props: {
     darkSource?: string,
     alt?: string,
     className?: string,
+    height?: number,
     onClick?: () => void,
 }) {
     if (props.onClick) {
@@ -67,7 +69,23 @@ export function SectionImage(props: {
 export function SectionVideo(props: {
     source: string,
     className?: string,
+    onClick?: () => void,
 } & React.HTMLProps<HTMLVideoElement>) {
+    if (props.onClick) {
+        return (
+            <button
+                className={`section-video ${props.className || ""}`}
+                onClick={props.onClick}>
+                <video
+                    src={props.source}
+                    controls={false}
+                    className="section-video__content" />
+                <TbPlayerPlayFilled
+                    className="section-video__play" />
+            </button>
+        );
+    }
+
     return (
         <video
             {...props}
