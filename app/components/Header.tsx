@@ -1,4 +1,4 @@
-import { TbBrandGithub } from "react-icons/tb";
+import { TbBrandGithub, TbFileText } from "react-icons/tb";
 import "./Header.css";
 import LinkChip from "./LinkChip";
 
@@ -19,11 +19,20 @@ export default function Header() {
                     </span>
                 </p>
 
-                <LinkChip
-                    href="https://github.com/RadekVyM">
-                    <TbBrandGithub />
-                    <span>GitHub</span>
-                </LinkChip>
+                <div
+                    className="header-links">
+                    <LinkChip
+                        href="https://github.com/RadekVyM">
+                        <TbBrandGithub />
+                        <span>GitHub</span>
+                    </LinkChip>
+                    <LinkChip
+                        href="./cv.pdf"
+                        target="_blank">
+                        <TbFileText />
+                        <span>Curriculum Vitae</span>
+                    </LinkChip>
+                </div>
             </div>
         </header>
     );

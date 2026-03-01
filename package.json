@@ -4,12 +4,13 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "npx tsx ./cv/gen-cv.tsx && next build",
     "start": "next start",
     "lint": "eslint",
     "serve": "npx serve@latest out"
   },
   "dependencies": {
+    "@react-pdf/renderer": "^4.3.2",
     "next": "16.1.6",
     "react": "19.2.3",
     "react-dom": "19.2.3",
