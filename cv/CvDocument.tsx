@@ -43,12 +43,14 @@ export default function CvDocument() {
                         date="June 2026 (expected)"
                         degree="Master"
                         degreeDetail="Software Development, Faculty of Science, Palacký University Olomouc"
-                        thesisTitle="Web tool for concept lattice visualization" />
+                        thesisTitle="Web tool for concept lattice visualization"
+                        thesisLink={{ title: "radekvym.github.io/konlatt", href: "https://radekvym.github.io/konlatt" }} />
                     <EducationItem
                         date="June 2024"
                         degree="Bachelor"
                         degreeDetail="Computer Science, Faculty of Science, Palacký University Olomouc"
                         thesisTitle="DBLP database analysis tool"
+                        thesisLink={{ title: "github.com/RadekVyM/dblp-analysis-tool", href: "https://github.com/RadekVyM/dblp-analysis-tool" }}
                         marginBottom={0}
                         withDistinction />
                 </Section>
@@ -221,6 +223,7 @@ function EducationItem(props: {
     withDistinction?: boolean,
     degreeDetail: string,
     thesisTitle: string,
+    thesisLink: { title: string, href: string, },
 }) {
     return (
         <SectionItem
@@ -235,7 +238,7 @@ function EducationItem(props: {
                 style={{
                     marginBottom: 0,
                 }}>
-                {props.degree} thesis: <ItalicText>{props.thesisTitle}</ItalicText>
+                {props.degree} thesis: <ItalicText>{props.thesisTitle}</ItalicText> <InlineLink title={props.thesisLink.title} href={props.thesisLink.href} />
             </ListItem>
         </SectionItem>
     );
@@ -276,7 +279,7 @@ function ProjectItem(props: {
         <SectionItem
             marginBottom={props.marginBottom}
             pretitle={props.type}
-            title={<><BoldText>{props.title}</BoldText> <Text style={{ fontSize: SMALL_FONT_SIZE }}>[<Link src={props.link.href} style={{ textDecoration: "none", color: DIM_COLOR, }}>{props.link.title}</Link>]</Text></>}>
+            title={<><BoldText>{props.title}</BoldText> <InlineLink title={props.link.title} href={props.link.href} /></>}>
             {(props.items || []).map((item, index) =>
                 <ListItem
                     key={index}
@@ -286,6 +289,15 @@ function ProjectItem(props: {
                     {item}
                 </ListItem>)}
         </SectionItem>
+    );
+}
+
+function InlineLink(props: {
+    title: string,
+    href: string,
+}) {
+    return (
+        <Text style={{ fontSize: SMALL_FONT_SIZE, color: DIM_COLOR, }}>[<Link src={props.href} style={{ textDecoration: "none", color: DIM_COLOR, }}>{props.title}</Link>]</Text>
     );
 }
 
