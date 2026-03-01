@@ -1,8 +1,9 @@
 import { Section, SectionTitle } from "../section";
+import "./AndMore.css";
 
 export default function AndMore() {
     return (
-        <Section className="ano-more">
+        <Section className="and-more">
             <SectionTitle>
                 And more...
             </SectionTitle>

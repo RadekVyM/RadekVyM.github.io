@@ -2,7 +2,6 @@
 
 import { SectionImages, Section, SectionImage, SectionTitle, SectionLinks, SectionTechnologies } from "../section";
 import "./MauiChallenges.css";
-import LinkChip from "../LinkChip";
 import { TbBrandGithub } from "react-icons/tb";
 import { createImageItem, createVideoItem, MediaItem } from "../../types/MediaItem";
 import useMediaDialog from "../../hooks/useMediaDialog";
@@ -15,13 +14,38 @@ const IMAGES: Array<MediaItem> = [
 ];
 
 const VIDEOS: Array<MediaItem> = [
-    createVideoItem("gadgets-store-app", "/images/challenges/GadgetsStoreApp.mp4"),
-    createVideoItem("callingapp", "/images/challenges/CallingApp.mp4"),
-    createVideoItem("navbaranimation1", "/images/challenges/NavbarAnimation1.mp4"),
-    createVideoItem("navbaranimation2", "/images/challenges/NavbarAnimation2.mp4"),
-    createVideoItem("hamburger-menu-app", "/images/challenges/HamburgerMenuApp.mp4"),
-    createVideoItem("betapp", "/images/challenges/betapp.mp4"),
-    createVideoItem("wasteapp", "/images/challenges/wasteapp.mp4"),
+    createVideoItem(
+        "gadgets-store-app",
+        "/images/challenges/GadgetsStoreApp.mp4",
+        { text: "Gadgets Store App", href: "https://github.com/RadekVyM/Gadgets-Store-App" }),
+    createVideoItem(
+        "callingapp",
+        "/images/challenges/CallingApp.mp4",
+        { text: "Calling App", href: "https://github.com/RadekVyM/Calling-App" }),
+    createVideoItem(
+        "navbaranimation1",
+        "/images/challenges/NavbarAnimation1.mp4",
+        { text: "Navbar Animation #1", href: "https://github.com/RadekVyM/Navbar-Animation-1" }),
+    createVideoItem(
+        "navbaranimation2",
+        "/images/challenges/NavbarAnimation2.mp4",
+        { text: "Navbar Animation #2", href: "https://github.com/RadekVyM/Navbar-Animation-2" }),
+    createVideoItem(
+        "tab-bar-switches",
+        "/images/challenges/TabBarSwitches.mp4",
+        { text: "Tab Bar Switches Interaction", href: "https://github.com/RadekVyM/Tab-Bar-Switches-Interaction" }),
+    createVideoItem(
+        "hamburger-menu-app",
+        "/images/challenges/HamburgerMenuApp.mp4",
+        { text: "Hamburger Menu App", href: "https://github.com/RadekVyM/HamburgerMenuApp" }),
+    createVideoItem(
+        "betapp",
+        "/images/challenges/betapp.mp4",
+        { text: "Bet App", href: "https://github.com/RadekVyM/Bet-App" }),
+    createVideoItem(
+        "wasteapp",
+        "/images/challenges/wasteapp.mp4",
+        { text: "Waste App", href: "https://github.com/RadekVyM/Waste-App" }),
 ];
 
 export default function MauiChallenges() {
@@ -53,13 +77,14 @@ export default function MauiChallenges() {
                 These projects serve as <strong>visual proof-of-concepts</strong> to demonstrate that the framework can successfully handle unique and complex app UIs.
             </p>
 
-            <SectionLinks>
-                <LinkChip
-                    href="https://github.com/RadekVyM?tab=repositories&q=&type=public&language=c%23">
-                    <TbBrandGithub />
-                    <span>GitHub</span>
-                </LinkChip>
-            </SectionLinks>
+            <SectionLinks
+                links={[
+                    {
+                        href: "https://github.com/RadekVyM?tab=repositories&q=&type=public&language=c%23",
+                        title: "GitHub",
+                        icon: <TbBrandGithub />,
+                    },
+                ]} />
 
             <SectionTechnologies
                 items={["C#", ".NET MAUI", "SimpleToolkit"]} />

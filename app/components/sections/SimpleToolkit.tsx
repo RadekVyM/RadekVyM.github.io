@@ -1,5 +1,4 @@
 import { Section, SectionTitle, SectionLinks, SectionTechnologies } from "../section";
-import LinkChip from "../LinkChip";
 import { TbBrandGithub, TbPackage } from "react-icons/tb";
 
 export default function SimpleToolkit() {
@@ -17,18 +16,19 @@ export default function SimpleToolkit() {
                 over <strong>100,000 total downloads</strong> on <a href="https://www.nuget.org/profiles/RadekVyM">NuGet.org</a>.
             </p>
 
-            <SectionLinks>
-                <LinkChip
-                    href="https://github.com/RadekVyM/SimpleToolkit" >
-                    <TbBrandGithub />
-                    <span>GitHub</span>
-                </LinkChip>
-                <LinkChip
-                    href="https://www.nuget.org/profiles/RadekVyM" >
-                    <TbPackage />
-                    <span>NuGet</span>
-                </LinkChip>
-            </SectionLinks>
+            <SectionLinks
+                links={[
+                    {
+                        href: "https://github.com/RadekVyM/SimpleToolkit",
+                        title: "GitHub",
+                        icon: <TbBrandGithub />,
+                    },
+                    {
+                        href: "https://www.nuget.org/profiles/RadekVyM",
+                        title: "NuGet",
+                        icon: <TbPackage />,
+                    },
+                ]} />
 
             <SectionTechnologies
                 items={["C#", ".NET MAUI"]} />

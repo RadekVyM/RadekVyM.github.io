@@ -1,6 +1,6 @@
 "use client";
 
-import { TbChevronLeft, TbChevronRight, TbMinus, TbPlus, TbX } from "react-icons/tb";
+import { TbChevronLeft, TbChevronRight, TbExternalLink, TbMinus, TbPlus, TbX } from "react-icons/tb";
 import { MediaDialogState } from "../types/MediaDialogState";
 import { Dialog } from "./Dialog";
 import ImagePreview from "./ImagePreview";
@@ -92,6 +92,18 @@ export default function MediaDialog(props: {
                         <TbChevronRight />
                     </Button>
                 </>}
+
+            {props.state.currentItem.title &&
+                <div
+                    className="media-title">
+                    {props.state.currentItem.title.href ?
+                        <a
+                            href={props.state.currentItem.title.href}
+                            target="_blank">
+                            {props.state.currentItem.title.text} <TbExternalLink />
+                        </a> :
+                        <span>{props.state.currentItem.title.text}</span>}
+                </div>}
         </Dialog>
     );
 }

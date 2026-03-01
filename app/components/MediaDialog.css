@@ -34,7 +34,7 @@
     .video-preview {
         border-radius: 1rem;
         max-width: calc(100dvw - 3rem);
-        max-height: calc(100dvh - 4rem);
+        max-height: calc(100dvh - 7rem);
         object-fit: contain;
     }
 
@@ -78,6 +78,31 @@
         right: 1rem;
         top: 50%;
         translate: 0 -50%;
+    }
+
+    .media-title {
+        position: absolute;
+        left: 1rem;
+        bottom: 1rem;
+        display: flex;
+        gap: 0.25rem;
+        height: 1.75rem;
+        background: var(--foreground);
+        color: var(--background);
+        border-radius: 100vh;
+        text-align: center;
+        align-items: center;
+        padding-inline: 0.65rem;
+        font-size: 13px;
+        font-weight: 600;
+
+        a svg {
+            margin-bottom: -1px;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
     }
 
     .image-preview-zoom-bar {
@@ -126,7 +151,7 @@
 }
 
 .animate-dialog-in {
-    .image-preview-container, .image-preview-zoom-bar, .video-preview-container {
+    .image-preview-container, .image-preview-zoom-bar, .video-preview-container, .media-title {
         animation: slideUpIn 200ms ease-in-out forwards;
     }
 
@@ -144,7 +169,7 @@
 }
 
 .animate-dialog-out {
-    .image-preview-container, .image-preview-zoom-bar, .video-preview-container {
+    .image-preview-container, .image-preview-zoom-bar, .video-preview-container, .media-title {
         animation: slideUpIn 200ms ease-in-out reverse forwards;
     }
 

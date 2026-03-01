@@ -1,6 +1,7 @@
 import { TbPlayerPlayFilled } from "react-icons/tb";
 import ImagePreview from "./ImagePreview";
 import "./section.css";
+import LinkChip from "./LinkChip";
 
 export function Section(props: {
     children?: React.ReactNode,
@@ -95,13 +96,25 @@ export function SectionVideo(props: {
 }
 
 export function SectionLinks(props: {
-    children?: React.ReactNode,
+    links: Array<{
+        href: string,
+        title: string,
+        icon: React.ReactNode,
+    }>,
 }) {
     return (
-        <div
+        <ul
             className="section-links">
-            {props.children}
-        </div>
+            {props.links.map((link) =>
+                <li
+                    key={link.href}>
+                    <LinkChip
+                        href={link.href}>
+                        {link.icon}
+                        <span>{link.title}</span>
+                    </LinkChip>
+                </li>)}
+        </ul>
     );
 }
 
@@ -109,14 +122,14 @@ export function SectionTechnologies(props: {
     items: Array<string>,
 }) {
     return (
-        <div
+        <ul
             className="section-technologies">
             {props.items.map((item, index) =>
-                <span
+                <li
                     key={index}
                     className="section-technologies__item">
                     {item}
-                </span>)}
-        </div>
+                </li>)}
+        </ul>
     );
 }

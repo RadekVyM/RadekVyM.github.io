@@ -1,7 +1,6 @@
 "use client";
 
 import { Section, SectionTitle, SectionLinks, SectionTechnologies, SectionImages, SectionVideo } from "../section";
-import LinkChip from "../LinkChip";
 import { TbBrandGithub } from "react-icons/tb";
 import { createVideoItem } from "@/app/types/MediaItem";
 import useMediaDialog from "@/app/hooks/useMediaDialog";
@@ -39,13 +38,14 @@ export default function MarvelousMaui() {
                 its release.
             </p>
 
-            <SectionLinks>
-                <LinkChip
-                    href="https://github.com/RadekVyM/MarvelousMAUI" >
-                    <TbBrandGithub />
-                    <span>GitHub</span>
-                </LinkChip>
-            </SectionLinks>
+            <SectionLinks
+                links={[
+                    {
+                        href: "https://github.com/RadekVyM/MarvelousMAUI",
+                        title: "GitHub",
+                        icon: <TbBrandGithub />,
+                    },
+                ]} />
 
             <SectionTechnologies
                 items={["C#", ".NET MAUI", "SimpleToolkit"]} />

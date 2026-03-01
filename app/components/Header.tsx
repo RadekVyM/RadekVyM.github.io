@@ -14,7 +14,7 @@ export default function Header() {
                     <span className="hello">
                         Hi, I'm Radek Vymětalík. I enjoy building unique GUIs, and these are
                     </span>
-                    <span className="this-i-done">
+                    <span className="things-i-done">
                         some things I've done
                     </span>
                 </p>

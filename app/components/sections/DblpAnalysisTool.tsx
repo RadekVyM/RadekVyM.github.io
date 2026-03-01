@@ -2,7 +2,6 @@
 
 import { Section, SectionTitle, SectionLinks, SectionTechnologies, SectionImages, SectionImage } from "../section";
 import "./Konlatt.css";
-import LinkChip from "../LinkChip";
 import { TbBrandGithub, TbFileText } from "react-icons/tb";
 import "./DblpAnalysisTool.css";
 import { createImageItem, MediaItem } from "../../types/MediaItem";
@@ -45,18 +44,19 @@ export default function DblpAnalysisTool() {
                 from dblp with a user-friendly interface.
             </p>
 
-            <SectionLinks>
-                <LinkChip
-                    href="https://github.com/RadekVyM/dblp-analysis-tool" >
-                    <TbBrandGithub />
-                    <span>GitHub</span>
-                </LinkChip>
-                <LinkChip
-                    href="https://github.com/RadekVyM/dblp-analysis-tool/blob/main/text/BP_Vym%C4%9Btal%C3%ADk.pdf" >
-                    <TbFileText />
-                    <span>Thesis</span>
-                </LinkChip>
-            </SectionLinks>
+            <SectionLinks
+                links={[
+                    {
+                        href: "https://github.com/RadekVyM/dblp-analysis-tool",
+                        title: "GitHub",
+                        icon: <TbBrandGithub />,
+                    },
+                    {
+                        href: "https://github.com/RadekVyM/dblp-analysis-tool/blob/main/text/BP_Vym%C4%9Btal%C3%ADk.pdf",
+                        title: "Thesis",
+                        icon: <TbFileText />,
+                    },
+                ]} />
 
             <SectionTechnologies
                 items={["React", "Next.js", "Tailwind CSS", "TypeScript", "Web Workers", "Canvas API"]} />

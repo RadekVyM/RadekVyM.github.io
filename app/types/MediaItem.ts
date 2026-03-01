@@ -4,6 +4,12 @@ export type MediaItem = {
     source: string,
     darkSource?: string,
     alt?: string,
+    title?: MediaTitle,
+}
+
+type MediaTitle = {
+    text: string,
+    href?: string,
 }
 
 export function createImageItem(
@@ -11,15 +17,17 @@ export function createImageItem(
     source: string,
     darkSource?: string,
     alt?: string,
+    title?: MediaTitle,
 ) {
-    return createMediaItem("image", className, source, darkSource, alt);
+    return createMediaItem("image", className, source, darkSource, alt, title);
 }
 
 export function createVideoItem(
     className: string,
     source: string,
+    title?: MediaTitle,
 ) {
-    return createMediaItem("video", className, source);
+    return createMediaItem("video", className, source, undefined, undefined, title);
 }
 
 export function createMediaItem(
@@ -28,6 +36,7 @@ export function createMediaItem(
     source: string,
     darkSource?: string,
     alt?: string,
+    title?: MediaTitle,
 ) {
     return {
         type,
@@ -35,5 +44,6 @@ export function createMediaItem(
         source,
         darkSource,
         alt,
+        title,
     };
 }

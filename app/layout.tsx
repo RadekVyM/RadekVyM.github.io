@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     title: "Radek Vymětalík | Software developer",
     description:
         "My portfolio page that showcases my projects, skills, and experience in a responsive, modern interface.",
+    metadataBase: new URL("https://radekvym.github.io"),
 };
 
 export default function RootLayout({
