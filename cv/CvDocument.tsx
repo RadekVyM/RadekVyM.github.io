@@ -63,7 +63,7 @@ export default function CvDocument() {
                         items={[
                             "Contributed to the development and modernization of university information systems",
                             "Collaborated with a professional development team and gained experience with internal software infrastructure",
-                            "Worked with ASP.NET Core, HTML, CSS, and internal libraries"
+                            "Worked with ASP.NET Core, NUnit, HTML, CSS, and internal libraries"
                         ]} />
                     <ExprerienceItem
                         timeSpan="Part-time, 2019 – 2025"
@@ -111,7 +111,7 @@ export default function CvDocument() {
                             fontSize: SMALL_FONT_SIZE,
                         }}>
                         <ListItem>
-                            <BoldText>Technologies:</BoldText> C#, .NET MAUI, ASP.NET Core, EF Core, React, Next.js, TS/JS, Tailwind CSS, WASM, Git
+                            <BoldText>Technologies:</BoldText> React, Next.js, TS/JS, Tailwind CSS, C#, .NET MAUI, ASP.NET Core, EF Core, Git
                         </ListItem>
                         <ListItem
                             style={{ marginBottom: 0 }}>
@@ -175,6 +175,10 @@ function Contact() {
                 title="github.com/RadekVyM"
                 icon="./cv/images/brand-github.png"
                 href="https://github.com/RadekVyM" />
+            <ContactItem
+                title="linkedin.com/in/radek-vymetalik"
+                icon="./cv/images/brand-linkedin.png"
+                href="https://www.linkedin.com/in/radek-vymetalik" />
             <ContactItem
                 title="rvymetalik@email.cz"
                 icon="./cv/images/mail.png"
