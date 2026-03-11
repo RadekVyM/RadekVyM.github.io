@@ -8,6 +8,7 @@ import ItNetwork from "./components/sections/ItNetwork";
 import Footer from "./components/Footer";
 import MauiChallenges from "./components/sections/MauiChallenges";
 import AndMore from "./components/sections/AndMore";
+import Tomeflow from "./components/sections/Tomeflow";
 
 export default function Home() {
     return (
@@ -26,6 +27,8 @@ export default function Home() {
             <MarvelousMaui />
 
             <MauiChallenges />
+
+            <Tomeflow />
 
             <AndMore />
 
