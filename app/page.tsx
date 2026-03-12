@@ -9,6 +9,7 @@ import Footer from "./components/Footer";
 import MauiChallenges from "./components/sections/MauiChallenges";
 import AndMore from "./components/sections/AndMore";
 import Tomeflow from "./components/sections/Tomeflow";
+import Instapound from "./components/sections/Instapound";
 
 export default function Home() {
     return (
@@ -29,6 +30,8 @@ export default function Home() {
             <MauiChallenges />
 
             <Tomeflow />
+
+            <Instapound />
 
             <AndMore />
 

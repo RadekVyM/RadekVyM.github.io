@@ -1,0 +1,45 @@
+.instapound {
+    .section-image, .section-image__content {
+        border-radius: 14px;
+    }
+
+    .section-image__content {
+        border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .home-page-image {
+        --rotation: -1deg;
+        z-index: 10;
+        transform: scale(85%) rotateZ(var(--rotation)) translateY(-8%);
+    }
+    .profile-page-image {
+        --rotation: -11deg;
+        z-index: 6;
+        margin-top: 15%;
+        transform: scale(80%) rotateZ(var(--rotation)) translateX(-25%) translateY(-18%);
+    }
+    .chat-image {
+        --rotation: 7deg;
+        z-index: 8;
+        margin-top: 15%;
+        transform: scale(70%) rotateZ(var(--rotation)) translateX(40%) translateY(10%);
+    }
+    .login-page-image {
+        --rotation: 1deg;
+        z-index: 4;
+        transform: scale(75%) translateX(-2%) translateY(60%) rotateZ(var(--rotation));
+    }
+
+    button.home-page-image:hover {
+        --rotation: 0deg;
+    }
+    button.profile-page-image:hover {
+        --rotation: -10deg;
+    }
+    button.chat-image:hover {
+        --rotation: 8deg;
+    }
+    button.login-page-image:hover {
+        --rotation: 3deg;
+    }
+}
