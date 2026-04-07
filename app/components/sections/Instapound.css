@@ -1,4 +1,8 @@
 .instapound {
+    .section-images {
+        margin-bottom: calc(2rem - 5%);
+    }
+
     .section-image, .section-image__content {
         border-radius: 14px;
     }
@@ -10,7 +14,7 @@
     .home-page-image {
         --rotation: -1deg;
         z-index: 10;
-        transform: scale(85%) rotateZ(var(--rotation)) translateY(-8%);
+        transform: scale(80%) rotateZ(var(--rotation)) translateY(-8%);
     }
     .profile-page-image {
         --rotation: -11deg;
@@ -22,12 +26,12 @@
         --rotation: 7deg;
         z-index: 8;
         margin-top: 15%;
-        transform: scale(70%) rotateZ(var(--rotation)) translateX(40%) translateY(10%);
+        transform: scale(70%) rotateZ(var(--rotation)) translateX(40%) translateY(-10%);
     }
     .login-page-image {
         --rotation: 1deg;
         z-index: 4;
-        transform: scale(75%) translateX(-2%) translateY(60%) rotateZ(var(--rotation));
+        transform: scale(75%) translateX(-2%) translateY(48%) rotateZ(var(--rotation));
     }
 
     button.home-page-image:hover {

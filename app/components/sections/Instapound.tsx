@@ -52,7 +52,7 @@ export default function Instapound() {
                 ]} />
 
             <SectionTechnologies
-                items={["C#", "ASP.NET Core", "JavaScript", "Tailwind CSS", "EF Core", "SQLite", "Razor", "SignalR"]} />
+                items={["C#", "ASP.NET Core", "JavaScript", "Tailwind CSS", "EF Core", "Razor", "SignalR"]} />
 
             <MediaDialog
                 state={dialogState} />

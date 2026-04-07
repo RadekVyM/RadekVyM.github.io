@@ -1,4 +1,8 @@
 .dblp-analysis-tool {
+    .section-images {
+        margin-bottom: calc(2rem - 19%);
+    }
+
     .section-image, .section-image__content {
         border-radius: 14px;
     }
@@ -10,22 +14,22 @@
     .landing-page-image {
         --rotation: 2deg;
         z-index: 10;
-        transform: scale(65%) rotateZ(var(--rotation)) translateX(5%) translateY(-25%);
+        transform: scale(65%) rotateZ(var(--rotation)) translateX(-1%) translateY(-25%);
     }
     .coauthorship-graph-image {
         --rotation: -8deg;
         z-index: 8;
-        transform: scale(70%) rotateZ(var(--rotation)) translateX(-35%);
+        transform: scale(60%) rotateZ(var(--rotation)) translateX(-45%) translateY(-23%);
     }
     .author-page-pie-image {
         --rotation: 7deg;
         z-index: 6;
-        transform: scale(65%) rotateZ(var(--rotation)) translateX(40%) translateY(15%);
+        transform: scale(60%) rotateZ(var(--rotation)) translateX(45%) translateY(-12%);
     }
     .author-page-header-image {
         --rotation: -1deg;
         z-index: 4;
-        transform: scale(65%) translateX(-15%) translateY(25%) rotateZ(var(--rotation));
+        transform: scale(65%) translateX(-15%) translateY(-7%) rotateZ(var(--rotation));
     }
 
     button.landing-page-image:hover {

@@ -15,8 +15,15 @@ const IMAGES: Array<MediaItem> = [
     createImageItem("coauthorship-graph-image", "/images/dblp-analysis-tool/coauthorship_graph.png"),
 ];
 
+const DIALOG_IMAGES: Array<MediaItem> = [
+    ...IMAGES,
+    createImageItem("author-page-charts-image", "/images/dblp-analysis-tool/author_page_charts.png"),
+    createImageItem("search-image", "/images/dblp-analysis-tool/search.png"),
+    createImageItem("stream-section-image", "/images/dblp-analysis-tool/stream_section.png"),
+];
+
 export default function DblpAnalysisTool() {
-    const dialogState = useMediaDialog(IMAGES);
+    const dialogState = useMediaDialog(DIALOG_IMAGES);
 
     return (
         <Section className="dblp-analysis-tool">

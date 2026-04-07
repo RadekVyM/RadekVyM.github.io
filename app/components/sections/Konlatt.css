@@ -1,6 +1,7 @@
 .konlatt {
     .section-images {
         margin-top: 4%;
+        margin-bottom: calc(2rem - 5%);
     }
 
     .diagram-image {
@@ -12,19 +13,19 @@
         --rotation: -12deg;
         z-index: 6;
         margin-top: 15%;
-        transform: scale(80%) rotateZ(var(--rotation)) translateX(-25%) translateY(-10%);
+        transform: scale(80%) rotateZ(var(--rotation)) translateX(-25%) translateY(-18%);
     }
     .context-image {
         --rotation: 7deg;
         z-index: 8;
         margin-top: 15%;
-        transform: scale(70%) rotateZ(var(--rotation)) translateX(35%) translateY(15%);
+        transform: scale(70%) rotateZ(var(--rotation)) translateX(35%) translateY(10%);
     }
     .explorer-image {
         --rotation: 1deg;
         z-index: 4;
         margin-top: 25%;
-        transform: scale(75%) translateX(-2%) translateY(15%) rotateZ(var(--rotation));
+        transform: scale(75%) translateX(-2%) translateY(5%) rotateZ(var(--rotation));
     }
 
     button.diagram-image:hover {
