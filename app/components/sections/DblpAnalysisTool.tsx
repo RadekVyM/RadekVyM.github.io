@@ -47,7 +47,7 @@ export default function DblpAnalysisTool() {
             <p>
                 Web application for analyzing the <a href="https://dblp.org/">dblp computer science bibliography</a>,
                 built as part of my bachelor's thesis at <a href="https://www.inf.upol.cz/">Palacký University Olomouc</a>.
-                The project enables researchers and institutions to <strong>visualize, explore, and analyze</strong> bibliographic metadata
+                The project enables to <strong>visualize, explore, and analyze</strong> bibliographic metadata
                 from dblp with a user-friendly interface.
             </p>
 

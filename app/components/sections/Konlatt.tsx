@@ -2,7 +2,7 @@
 
 import { SectionImages, Section, SectionImage, SectionTitle, SectionLinks, SectionTechnologies } from "../section";
 import "./Konlatt.css";
-import { TbBrandGithub, TbWorld } from "react-icons/tb";
+import { TbBrandGithub, TbFileText, TbWorld } from "react-icons/tb";
 import { createImageItem, MediaItem } from "../../types/MediaItem";
 import useMediaDialog from "../../hooks/useMediaDialog";
 import MediaDialog from "../MediaDialog";
@@ -38,7 +38,7 @@ export default function Konlatt() {
 
             <p>
                 Web application that bridges the gap between complex <a href="https://en.wikipedia.org/wiki/Formal_concept_analysis">Formal Concept Analysis</a> (FCA)
-                and user-friendly interaction, making conceptual data exploration <strong>accessible to anyone</strong>. This application is being developed as part of
+                and user-friendly interaction, making conceptual data exploration <strong>accessible to anyone</strong>. This application was developed as part of
                 my master's thesis at <a href="https://www.inf.upol.cz/">Palacký University Olomouc</a>.
             </p>
 
@@ -53,6 +53,11 @@ export default function Konlatt() {
                         href: "https://github.com/RadekVyM/konlatt",
                         title: "GitHub",
                         icon: <TbBrandGithub />,
+                    },
+                    {
+                        href: "https://github.com/RadekVyM/konlatt/blob/main/text/DP_Vym%C4%9Btal%C3%ADk.pdf",
+                        title: "Thesis",
+                        icon: <TbFileText />,
                     },
                 ]} />
 

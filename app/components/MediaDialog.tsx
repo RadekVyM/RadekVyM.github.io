@@ -8,6 +8,7 @@ import "./MediaDialog.css";
 import PanZoomContainer, { PanZoomContext, PanZoomContextProvider } from "./PanZoomContainer";
 import { MediaItem } from "../types/MediaItem";
 import { useContext, useRef, useState } from "react";
+import useEventListener from "../hooks/useEventListener";
 
 const ANIMATION_SEGMENT_LENGTH = 160;
 
@@ -48,6 +49,21 @@ export default function MediaDialog(props: {
             }, ANIMATION_SEGMENT_LENGTH);
         }, ANIMATION_SEGMENT_LENGTH);
     }
+
+    useEventListener("keydown", (e) => {
+        if (props.state.items.length <= 1) {
+            return;
+        }
+
+        switch (e.key) {
+            case "ArrowRight":
+                moveCurrentItem(1);
+                break;
+            case "ArrowLeft":
+                moveCurrentItem(-1);
+                break;
+        }
+    });
 
     return (
         <Dialog

@@ -40,13 +40,13 @@ export default function CvDocument() {
                 <Section
                     title="Education">
                     <EducationItem
-                        date="June 2026 (expected)"
+                        date="September 2024 – June 2026"
                         degree="Master"
                         degreeDetail="Software Development, Faculty of Science, Palacký University Olomouc"
                         thesisTitle="Web tool for concept lattice visualization"
                         thesisLink={{ title: "radekvym.github.io/konlatt", href: "https://radekvym.github.io/konlatt" }} />
                     <EducationItem
-                        date="June 2024"
+                        date="September 2021 – June 2024"
                         degree="Bachelor"
                         degreeDetail="Computer Science, Faculty of Science, Palacký University Olomouc"
                         thesisTitle="DBLP database analysis tool"
@@ -62,7 +62,6 @@ export default function CvDocument() {
                         place="Computer Centre of Palacký University (CVT)"
                         items={[
                             "Contributed to the development and modernization of university information systems",
-                            "Collaborated with a professional development team and gained experience with internal software infrastructure",
                             "Worked with ASP.NET Core, NUnit, HTML, CSS, and internal libraries"
                         ]} />
                     <ExprerienceItem
@@ -82,7 +81,7 @@ export default function CvDocument() {
                         title="konlatt"
                         link={{ title: "radekvym.github.io/konlatt", href: "https://radekvym.github.io/konlatt" }}
                         items={[
-                            "Created a web application for visualization of Formal Concept Analysis (FCA) data",
+                            "Web application for visualization of Formal Concept Analysis (FCA) data",
                             "Used technologies: React, TypeScript, Tailwind CSS, WASM, Web Workers, Zustand, React Three Fiber, Canvas API"
                         ]} />
                     <ProjectItem
@@ -90,7 +89,7 @@ export default function CvDocument() {
                         title="SimpleToolkit"
                         link={{ title: "github.com/RadekVyM/SimpleToolkit", href: "https://github.com/RadekVyM/SimpleToolkit" }}
                         items={[
-                            "Created a library for advanced UI navigation and lightweight controls in .NET MAUI",
+                            "Library for advanced UI navigation and lightweight controls in .NET MAUI",
                             "The library has earned 500+ stars on GitHub and over 100,000 total downloads on NuGet.org"
                         ]} />
                     <ProjectItem
@@ -98,8 +97,8 @@ export default function CvDocument() {
                         title="Marvelous .NET MAUI"
                         link={{ title: "github.com/RadekVyM/MarvelousMAUI", href: "https://github.com/RadekVyM/MarvelousMAUI" }}
                         items={[
-                            "Created a clone of the \"Wonderous\" app to demonstrate the limits of tailored UI in .NET MAUI",
-                            "The project gained significant community recognition with 500+ stars on GitHub"
+                            "Clone of the \"Wonderous\" app to demonstrate the limits of tailored UI in .NET MAUI",
+                            "The project has been well received by the .NET MAUI community and earned 500+ stars on GitHub"
                         ]}
                         marginBottom={0} />
                 </Section>
@@ -128,7 +127,7 @@ function Header() {
     return (
         <View
             style={{
-                marginBottom: 23
+                marginBottom: 20
             }}>
             <Text
                 style={{
