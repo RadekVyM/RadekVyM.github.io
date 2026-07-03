@@ -44,7 +44,8 @@ export default function CvDocument() {
                         degree="Master"
                         degreeDetail="Software Development, Faculty of Science, Palacký University Olomouc"
                         thesisTitle="Web tool for concept lattice visualization"
-                        thesisLink={{ title: "radekvym.github.io/konlatt", href: "https://radekvym.github.io/konlatt" }} />
+                        thesisLink={{ title: "radekvym.github.io/konlatt", href: "https://radekvym.github.io/konlatt" }}
+                        withDistinction />
                     <EducationItem
                         date="September 2021 – June 2024"
                         degree="Bachelor"
@@ -241,7 +242,7 @@ function EducationItem(props: {
                 style={{
                     marginBottom: 0,
                 }}>
-                {props.degree} thesis: <ItalicText>{props.thesisTitle}</ItalicText> <InlineLink title={props.thesisLink.title} href={props.thesisLink.href} />
+                {props.degree}'s thesis: <ItalicText>{props.thesisTitle}</ItalicText> <InlineLink title={props.thesisLink.title} href={props.thesisLink.href} />
             </ListItem>
         </SectionItem>
     );
